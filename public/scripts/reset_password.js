@@ -25,3 +25,4 @@ function resetPassword() {
             alert('오류: ' + error.message);
         });
 }
+// Reset Password function
