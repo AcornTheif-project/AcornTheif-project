@@ -1,7 +1,7 @@
 /* 공통 스타일 */
 * {
     margin: 0px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* 모든 요소에 박스 크기 설정을 적용 */
 }
 
 html, body {
@@ -78,13 +78,14 @@ button {
     align-self: flex-end; /* 버튼을 우측 끝으로 정렬 */
 }
 
-.diaryEntries ul, .storyEntries ul {
+.diaryEntries ul {
     list-style-type: none;
     padding: 0;
     width: 100%;
 }
 
-.diaryEntries li, .storyEntries li {
+/* 다이어리 글의 블록 스타일을 설정 */
+.diaryEntries li {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
@@ -94,29 +95,5 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.friendPosts, .storyEntries {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-}
-
-.friendPosts div, .storyEntries div {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.friendPosts button, .storyEntries button {
-    background-color: #ff6f61;
-    padding: 10px 15px;
-    font-size: 8px;
-    margin: 1px 1px;
-    align-self: flex-end; /* 버튼을 우측 끝으로 정렬 */
+    min-height: 60px; /* 블록의 최소 높이 설정 */
 }
