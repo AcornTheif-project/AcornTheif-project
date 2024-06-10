@@ -23,15 +23,15 @@
         
         <!-- 내 다이어리 섹션 -->
         <div class="wrapper__body" id="myDiarySection" style="display: none;">
-            <div class="contents__title" style="display: flex; justify-content: space-between; align-items: center;">
-                <div>
-                    <div class="title">Diary</div>
-                    <div class="subtitle">For my day</div>
-                </div>
-                <button class="registerButton" onclick="postDiaryEntry()">게시</button> <!-- 버튼을 오른쪽으로 이동 -->
+            <div class="contents__title">
+                <div class="title">Diary</div>
+                <div class="subtitle">For my day</div>
             </div>
             <div class="divideLine"></div>
-            <textarea id="newPost" class="newPost" placeholder="글을 작성해주세요."></textarea>
+            <div class="input-container">
+                <textarea id="newPost" class="newPost" placeholder="글을 작성해주세요."></textarea>
+                <button class="registerButton" onclick="postDiaryEntry()">게시</button> <!-- 버튼을 텍스트 영역 아래로 이동 -->
+            </div>
             <ul id="diaryEntries" class="diaryEntries"></ul>
         </div>
     </div>
