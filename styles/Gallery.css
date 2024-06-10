@@ -1,3 +1,4 @@
+/* 기존 스타일 */
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -7,4 +8,143 @@
 html, body {
     width: 100%;
     height: 100%;
+    font-family: Arial, sans-serif;
 }
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    padding: 20px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+.contents__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title {
+    color: #55b2d4;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    padding-left: 5px;
+    font-size: 8px;
+}
+
+.button_box {
+    border-radius: 5px;
+}
+
+.gallery_photo, .story_photo {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.photo-upload {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.photo-upload input[type="text"] {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.photo-upload button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.photo-album .photo-item, .story-album .story-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.photo-album .photo-item img, .story-album .story-item img {
+    max-width: 100%;
+}
+
+.like-btn {
+    border: 2px solid #55b2d4;
+    background-color: #55b2d4;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-btn.liked {
+    background-color: white;
+    color: #55b2d4;
+}
+
+/* 댓글 스타일 */
+.comment-section {
+    margin-top: 10px;
+}
+
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.comment-section button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.comments {
+    margin-top: 10px;
+}
+
+.comment-item {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 삭제 버튼 스타일 */
+/* 삭제 버튼 스타일 */
+.delete-btn {
+    border: 2px solid red;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px; /* 사진의 하단에서 10px 위에 위치하도록 설정 */
+    right: 10px; /* 사진의 오른쪽에서 10px 왼쪽에 위치하도록 설정 */
+}
+
