@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Firebase Login</title>
+    <link href="styles/Sign_in.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>로그인</h1>
+        <p>로그인 정보를 입력해주세요</p>
+        <input class="inputbox" id="login-email" type="email" placeholder="Email">
+        <input class="inputbox" id="login-password" type="password" placeholder="Password">
+        <div class="btn-container">
+            <button class="Page_button" onclick="goToRegister()">회원가입</button>
+        </div>
+        <input type="submit" value="Login" onclick="login()">
+        <h2>Google Login</h2>
+        <button class="Page_button" onclick="googleLogin()">Login with Google</button>
+    </div>
+    <script>
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyANUvuFVtSO5hNo4wrE67XlGJnvmx-qjHU",
+            authDomain: "acornproject-31fe8.firebaseapp.com",
+            projectId: "acornproject-31fe8",
+            storageBucket: "acornproject-31fe8.appspot.com",
+            messagingSenderId: "186186674797",
+            appId: "1:186186674797:web:f6a5ae00c7c0be9026c564",
+            measurementId: "G-35N8JE5ZHQ"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Login function
+        function login() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.redirectUrl) {
+                    window.location.href = data.redirectUrl;
+                } else {
+                    alert(data);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Google Login function
+        function googleLogin() {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithPopup(provider)
+                .then((result) => {
+                    result.user.getIdToken().then((idToken) => {
+                        fetch('/login/google', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ idToken })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.redirectUrl) {
+                                window.location.href = data.redirectUrl;
+                            } else {
+                                alert(data);
+                            }
+                        })
+                        .catch(error => console.error('Error:', error));
+                    });
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Error: ' + error.message);
+                });
+        }
+
+        // Go to register page
+        function goToRegister() {
+            window.location.href = '/register.html';
+        }
+    </script>
+</body>
+</html>

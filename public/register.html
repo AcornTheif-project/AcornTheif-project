@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Firebase Register</title>
+    <link href="styles/Sign_up.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h3>회원가입</h3>
+        <input class="inputbox" id="register-name" type="text" placeholder="이름을 입력해주세요.">
+        <input class="inputbox" id="register-email" type="email" placeholder="이메일을 입력해 주세요.">
+        <input class="inputbox" id="register-password" type="password" placeholder="비밀번호를 입력해 주세요.">
+        <input class="inputbox" id="register-password-confirm" type="password" placeholder="비밀번호를 다시 입력해 주세요.">
+        
+        <select class="location" id="register-region">
+            <option value="">지역을 선택하세요.</option>
+            <option value="서울특별시">서울특별시</option>
+            <option value="부산광역시">부산광역시</option>
+            <option value="대구광역시">대구광역시</option>
+            <option value="인천광역시">인천광역시</option>
+            <option value="광주광역시">광주광역시</option>
+            <option value="대전광역시">대전광역시</option>
+            <option value="울산광역시">울산광역시</option>
+            <option value="세종특별자치시">세종특별자치시</option>
+            <option value="경기도">경기도</option>
+            <option value="강원특별자치도">강원특별자치도</option>
+            <option value="충청북도">충청북도</option>
+            <option value="충청남도">충청남도</option>
+            <option value="전라북도">전라북도</option>
+            <option value="전라남도">전라남도</option>
+            <option value="경상북도">경상북도</option>
+            <option value="경상남도">경상남도</option>
+            <option value="제주특별자치도">제주특별자치도</option>
+        </select>
+
+        <div class="gender__wrapper">
+            <div class="gender">
+                <input type="radio" name="gender" id="gender__male" class="gender__radio" value="남"> 남성
+            </div>
+            <div class="gender">
+                <input type="radio" name="gender" id="gender__female" class="gender__radio" value="여"> 여성
+            </div>
+        </div>
+
+        <button id="Sign_up__button" onclick="register()">가입하기</button>
+    </div>
+
+    <script>
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyANUvuFVtSO5hNo4wrE67XlGJnvmx-qjHU",
+            authDomain: "acornproject-31fe8.firebaseapp.com",
+            projectId: "acornproject-31fe8",
+            storageBucket: "acornproject-31fe8.appspot.com",
+            messagingSenderId: "186186674797",
+            appId: "1:186186674797:web:f6a5ae00c7c0be9026c564",
+            measurementId: "G-35N8JE5ZHQ"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Register function
+        function register() {
+            const name = document.getElementById('register-name').value;
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('register-password-confirm').value;
+            const region = document.getElementById('register-region').value;
+            const genderElements = document.getElementsByName('gender');
+            let gender = '';
+            for (let i = 0; i < genderElements.length; i++) {
+                if (genderElements[i].checked) {
+                    gender = genderElements[i].value;
+                    break;
+                }
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, password, region, gender })
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                window.location.href = '/';
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
