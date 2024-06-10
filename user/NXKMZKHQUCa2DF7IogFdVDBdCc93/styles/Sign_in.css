@@ -66,8 +66,6 @@ input[type="submit"] {
   border: none;
   text-decoration: underline;
   cursor: pointer;
-  color: black; /* 글씨 색깔을 검은색으로 변경 */
-  margin: 0 0px; /* 버튼들 간의 간격 설정 (좌우 각각 5px) */
 }
 
 /* 버튼 간의 구분선 스타일 */

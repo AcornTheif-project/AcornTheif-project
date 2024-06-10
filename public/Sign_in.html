@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>싸이월드 로그인</title>
+    <link href="styles/Sign_in.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth-compat.js"></script>
+    <script src="scripts/Sign_in.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>로그인</h1>
+        <p>로그인 정보를 입력해주세요</p>
+        <input class="inputbox" id="id" type="text" placeholder="Blockchain@IntelligenceLab.com"/>
+        <input class="inputbox" id="password" type="password" placeholder="Password"/>
+        <div class="btn-container">
+            <button class="Page_button" id="Sign_up" onclick="goToRegister()">회원가입</button>
+            <hr />
+            <button class="Page_button" id="Find_id" onclick="findId()">아이디 찾기</button>
+            <hr />
+            <button class="Page_button" id="Find_password" onclick="goToResetPassword()">비밀번호 찾기</button>
+        </div>
+        <input type="submit" value="Log in" onclick="login()"/>
+        <h2>Google 로그인</h2>
+        <button class="Page_button google-button" onclick="googleLogin()">
+            <img src="images/web_neutral_rd_SI@1x.png" alt="Google Sign-In">
+        </button>
+    </div>
+</body>
+</html>
