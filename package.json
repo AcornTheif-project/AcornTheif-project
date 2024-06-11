@@ -12,11 +12,18 @@
   "license": "ISC",
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "express": "^4.19.2", 
 =======
+=======
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+>>>>>>> main
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "firebase": "^10.12.2",
     "firebase-admin": "^12.1.1",
+    "fs": "^0.0.1-security",
     "node.js": "^0.0.1-security",
 >>>>>>> 5c12f49ff73c93c074aebd7108d2a38b02db0caa
     "nodemon": "^3.1.3"

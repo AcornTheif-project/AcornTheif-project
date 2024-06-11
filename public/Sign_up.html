@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>싸이월드 회원가입</title>
+    <link href="styles/Sign_up.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth-compat.js"></script>
+    <script src="script/Sign_up.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h3>회원가입</h3>
+        <input class="inputbox" id="email" type="text" placeholder="이메일을 입력해 주세요."/>
+        <div class="error" id="error__email"></div>
+        <input class="inputbox" id="writer" type="text" placeholder="이름을 입력해주세요."/>
+        <div class="error" id="error__writer"></div>
+        <input class="inputbox" id="password1" type="password" placeholder="비밀번호를 입력해 주세요."/>
+        <div class="error" id="error__password1"></div>
+        <input class="inputbox" id="password2" type="password" placeholder="비밀번호를 다시 입력해 주세요."/>
+        <div class="error" id="error__password2"></div>
+        
+        <div class="location__wrapper">
+            <select class="location" id="location">
+                <option disabled selected>지역을 선택하세요.</option>
+                <option>서울</option>
+                <option>경기</option>
+                <option>인천</option>
+                <option>전라</option>
+                <option>광주</option>
+                <option>강원</option>
+                <option>경상</option>
+                <option>충청</option>
+                <option>제주</option>
+            </select>
+        </div>
+        <div class="error" id="error__location"></div>
+        
+        <div class="gender__wrapper">
+            <div class="gender">
+                <input type="radio" name="gender" id="gender__woman" class="gender__radio" value="여"/>여성
+            </div>
+            <div class="gender">
+                <input type="radio" name="gender" id="gender__man" class="gender__radio" value="남"/>남성
+            </div>
+        </div>
+        <div class="error" id="error__gender"></div>
+        
+        <hr />
+        <div class="footer">
+            <button id="Sign_up__button" onclick="register()">가입하기</button>
+        </div>
+    </div>
+</body>
+</html>
