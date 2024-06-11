@@ -171,7 +171,7 @@ app.post('/register', async (req, res) => {
     copyFolderRecursiveSync(commonImagesDir, userDir);
 
     // 다른 HTML 파일들을 사용자 디렉토리에 복사합니다.
-    const htmlFiles = ['jukebox.html', 'Board.html', 'Diary.html', 'Guestbook.html', 'home.html'];
+    const htmlFiles = ['jukebox.html', 'Board.html', 'Diary.html', 'Guestbook.html', 'home.html','Gallery.html','setting.html',];
     htmlFiles.forEach(file => {
       const sourcePath = path.join(__dirname, 'public', file);
       const targetPath = path.join(userDir, file);
@@ -182,12 +182,12 @@ app.post('/register', async (req, res) => {
     const commonScriptsDir = path.join(__dirname, 'public', 'script');
     copyFolderRecursiveSync(commonScriptsDir, userDir);
 
-    res.status(200).send('User registered successfully!');
+    res.status(200).send('환영합니다!');
   } catch (error) {
     if (error.code === 'auth/email-already-in-use') {
-      res.status(400).send('Error: The email address is already in use by another account.');
+      res.status(400).send('이미 사용하고 있는 계정 정보 입니다.');
     } else {
-      res.status(400).send('Error: ' + error.message);
+      res.status(400).send('오류 메시지: ' + error.message);
     }
   }
 });
@@ -238,7 +238,7 @@ app.post('/logout', (req, res) => {
 });
 
 // 서버를 시작합니다.
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 5501;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
