@@ -1,7 +1,7 @@
 /* 공통 스타일 */
 * {
     margin: 0px;
-    box-sizing: border-box; /* 모든 요소에 박스 크기 설정을 적용 */
+    box-sizing: border-box;
 }
 
 html, body {
@@ -12,7 +12,7 @@ html, body {
 
 .wrapper {
     width: 100%;
-    min-height: 100%; /* 전체 높이를 충분히 크게 설정 */
+    min-height: 100%;
     padding: 20px 30px 30px 30px;
     display: flex;
     flex-direction: column;
@@ -57,6 +57,12 @@ html, body {
     width: 100%;
 }
 
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
 textarea {
     width: 100%;
     height: 100px;
@@ -78,59 +84,68 @@ button {
     align-self: flex-end; /* 버튼을 우측 끝으로 정렬 */
 }
 
-.diaryEntries ul, .storyEntries ul {
+.diaryEntries {
     list-style-type: none;
     padding: 0;
     width: 100%;
 }
 
-.diaryEntries li, .storyEntries li {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.diaryEntries li {
+    margin-bottom: 20px; /* 게시물 간의 간격 설정 */
 }
 
-.friendPosts, .storyEntries {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+.diary-scrollbox {
+    position: relative;
+    top: 10px;
+    max-height: 500px; /* 스크롤박스의 최대 높이 설정 */
+    overflow: hidden; /* 스크롤을 숨김 */
+}
+
+.diary {
+    border: 1px solid #EDEDF0;
+    padding: 1.5rem;
+    position: relative;
     display: flex;
     flex-direction: column;
-}
-
-.friendPosts div, .storyEntries div {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 0; /* 마진 제거 */
 }
 
-.friendPosts button, .storyEntries button {
-    background-color: #ff6f61;
-    padding: 10px 15px;
-    font-size: 8px;
-    margin: 1px 1px;
-    align-self: flex-end; /* 버튼을 우측 끝으로 정렬 */
+.diary-date {
+    font-family: "NeoDunggeunmo";
+    color: black;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #c7c9ca;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-.diaryEntries span {
-    flex-grow: 1; /* 게시물 내용 영역이 남은 공간을 차지하도록 설정 */
-    margin-right: 10px; /* 버튼과의 간격 설정 */
+.diary-contents {
+    font-size: 20px;
+    font-family: "KyoboHand";
+    text-align: center;
+    width: 100%;
 }
 
-.diaryEntries .button-group {
+.button-group {
     display: flex;
-    flex-shrink: 0; /* 버튼 그룹의 크기를 고정 */
+    gap: 5px; /* 버튼 간의 간격 설정 */
+    margin-top: 10px;
 }
 
-.diaryEntries button {
-    margin-left: 5px; /* 버튼 간의 간격 설정 */
+button {
+    padding: 5px;
+    background-color: #55b2d4;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button.edit {
+    background-color: #55b2d4;
 }
