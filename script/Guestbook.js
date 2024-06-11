@@ -1,18 +1,22 @@
-const startWord = () => {
-    let myword = document.getElementById("myword").value
-    let word = document.getElementById("word").innerText
+document.addEventListener('DOMContentLoaded', () => {
+    // Initial load, if needed
+});
 
-    let lastword = word[word.length - 1]
-    let firstword = myword[0]
+function submitGuestbook() {
+    let guestName = document.getElementById('guestName').value;
+    let guestComment = document.getElementById('guestComment').value;
 
-    if(lastword === firstword) {
-        //정답일때
-        document.getElementById("result").innerText = "정답입니다!"
-        document.getElementById("word").innerText = myword
-        document.getElementById("myword").value = ""
-    } else {
-        //오답일때
-        document.getElementById("result").innerText = "땡!"
-        document.getElementById("myword").value = ""
+    if (guestName && guestComment) {
+        let guestbookEntryHTML = `
+            <div class="guestbook-item">
+                <strong>${guestName}</strong>: ${guestComment}
+            </div>
+        `;
+        let guestbookEntries = document.getElementById('guestbookEntries');
+        guestbookEntries.insertAdjacentHTML('beforeend', guestbookEntryHTML);
+
+        // Clear input fields after submission
+        document.getElementById('guestName').value = '';
+        document.getElementById('guestComment').value = '';
     }
 }
