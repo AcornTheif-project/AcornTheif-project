@@ -9,7 +9,10 @@ function submitGuestbook() {
     if (guestName && guestComment) {
         let guestbookEntryHTML = `
             <div class="guestbook-item">
-                <strong>${guestName}</strong>: ${guestComment}
+                <div>
+                    <strong>${guestName}</strong>: ${guestComment}
+                </div>
+                <button class="delete-btn" onclick="confirmDelete(this)">삭제</button>
             </div>
         `;
         let guestbookEntries = document.getElementById('guestbookEntries');
@@ -19,4 +22,16 @@ function submitGuestbook() {
         document.getElementById('guestName').value = '';
         document.getElementById('guestComment').value = '';
     }
+}
+
+function confirmDelete(button) {
+    let confirmation = confirm("정말 삭제할까요?");
+    if (confirmation) {
+        deleteGuestbookEntry(button);
+    }
+}
+
+function deleteGuestbookEntry(button) {
+    let entry = button.parentElement;
+    entry.remove();
 }
