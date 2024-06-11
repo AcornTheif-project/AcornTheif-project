@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link href="./styles/Diary.css" rel="stylesheet" />
+    <script src="./script/Diary.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 비밀번호 입력 섹션 -->
+        <div class="wrapper__body" id="passwordSection">
+            <div class="contents__title">
+                <div class="title">Diary</div>
+                <div class="subtitle">For my day</div>
+            </div>
+            <div class="divideLine"></div>
+            <!-- 비밀번호 입력 필드 -->
+            <input type="password" id="myDiaryPassword" class="passwordInput" placeholder="비밀번호 입력" />
+            <button onclick="accessMyDiary()">확인</button>
+        </div>
+        
+        <!-- 내 다이어리 섹션 -->
+        <div class="wrapper__body" id="myDiarySection" style="display: none;">
+            <div class="contents__title">
+                <div class="title">Diary</div>
+                <div class="subtitle">For my day</div>
+            </div>
+            <div class="divideLine"></div>
+            <div class="input-container">
+                <textarea id="newPost" class="newPost" placeholder="글을 작성해주세요."></textarea>
+                <button class="registerButton" onclick="postDiaryEntry()">게시</button>
+            </div> 
+            <div class="diary-scrollbox">
+                <ul id="diaryEntries" class="diaryEntries"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

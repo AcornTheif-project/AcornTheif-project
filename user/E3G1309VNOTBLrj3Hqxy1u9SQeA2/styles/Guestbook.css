@@ -1,0 +1,118 @@
+/* Guestbook CSS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    padding: 20px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper__header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.content__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title {
+    color: #55b2d4;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.divideLine {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.guestbook-entry {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* 상단에서의 거리 조정 */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    background-color: white; /* 배경색 설정 */
+    padding: 10px 0; /* 패딩 설정 */
+    z-index: 10; /* 다른 요소들보다 위에 표시되도록 설정 */
+}
+
+.guestbook-box {
+    display: flex;
+    flex: 1;
+}
+
+.guestbook-name {
+    height: 30px; /* 높이 조정 */
+    width: 30%; /* 너비 조정 */
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.guestbook-comment {
+    height: 30px; /* 높이 조정 */
+    width: 60%; /* 너비 조정 */
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.action-btn {
+    border: 2px solid #55b2d4;
+    background-color: white;
+    color: #55b2d4;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.action-btn:hover {
+    background-color: #55b2d4;
+    color: white;
+}
+.guestbook-entries {
+    margin-top: 20px;
+}
+
+.guestbook-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.delete-btn {
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #ff0000;
+}

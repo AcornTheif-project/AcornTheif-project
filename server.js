@@ -240,5 +240,5 @@ app.post('/logout', (req, res) => {
 // 서버를 시작합니다.
 const PORT = process.env.PORT || 5501;
 app.listen(PORT, () => {
-  console.log(`Server running at http://203.234.55.241:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
