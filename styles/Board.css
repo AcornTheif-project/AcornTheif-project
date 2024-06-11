@@ -22,6 +22,12 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.board-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 .input-container {
     display: flex;
     flex-direction: column;
@@ -56,7 +62,7 @@ button {
 .boardEntries li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px;
     margin-bottom: 10px;
     background-color: #f9f9f9;
@@ -74,6 +80,7 @@ button {
 .boardEntries .button-group {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
 }
 
 .boardEntries button {

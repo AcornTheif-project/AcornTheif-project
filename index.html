@@ -4,9 +4,8 @@
     <title>도토리도둑님의 미니홈피 :: 사이좋은 사람들, 싸이월드</title>
     <link href="./styles/index.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a1797f53f3.js" crossorigin="anonymous"></script>
-    <script src="./script/index.js"></script>
+    <script src="./index.js" defer></script>
   </head>
-
   <body>
     <div class="background">
       <div class="outerbox">
@@ -15,8 +14,8 @@
             <div class="wrapper__left__header">
               <div class="today">
                 TODAY
-                <span class="zero">0</span> | TOTAL
-                <span class="count">12345</span>
+                <span class="zero"></span> | TOTAL
+                <span class="count"></span>
               </div>
             </div>
             <div class="wrapper__left__body">
@@ -25,19 +24,19 @@
                 <div class="left__body__header__line"></div>
               </div>
               <div class="left__body__profile">
-                <div class="profile__detail">
+                <div class="profile__detail name">
                   <i class="fas fa-file-signature"></i>
                   name
                 </div>
-                <div class="profile__detail">
+                <div class="profile__detail phone">
                   <i class="fas fa-phone"></i>
                   phone
                 </div>
-                <div class="profile__detail">
+                <div class="profile__detail mail">
                   <i class="fas fa-envelope-square"></i>
                   mail
                 </div>
-                <div class="profile__detail">
+                <div class="profile__detail instagram">
                   <i class="fas fa-images"></i>
                   instagram
                 </div>
@@ -46,11 +45,7 @@
                 <div class="wrapper__friendpool">
                   <div class="friendpool__title">파도타기</div>
                   <select class="friendpool__select">
-                    <option>-----</option>
-                    <option>최설아</option>
-                    <option>주민선</option>
-                    <option>소오훈</option>
-                    <option>윤영준</option>
+                    <!-- 친구 목록 옵션이 여기에 동적으로 추가됩니다 -->
                   </select>
                 </div>
                 <div class="wrapper__feel">

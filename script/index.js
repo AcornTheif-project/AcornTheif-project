@@ -75,3 +75,35 @@ function menuHome() {
     document.getElementById("menuGuestbook").style =
       "color: black; background-color: white;";
   }
+
+  async function fetchData() {
+    try {
+      const response = await fetch('/api/data');
+      const data = await response.json();
+      
+      document.querySelector('.today .zero').innerText = data.today || 0;
+      document.querySelector('.today .count').innerText = data.total || 0;
+      document.querySelector('.profile__detail.name').innerText = `name: ${data.name || ''}`;
+      document.querySelector('.profile__detail.phone').innerText = `phone: ${data.phone || ''}`;
+      document.querySelector('.profile__detail.mail').innerText = `mail: ${data.mail || ''}`;
+      document.querySelector('.profile__detail.instagram').innerText = `instagram: ${data.instagram || ''}`;
+  
+      const friendPoolSelect = document.querySelector('.friendpool__select');
+      friendPoolSelect.innerHTML = '';
+      (data.friendPool || []).forEach(friend => {
+        const option = document.createElement('option');
+        option.text = friend;
+        friendPoolSelect.add(option);
+      });
+  
+      const feelSelect = document.querySelector('.feel__select');
+      feelSelect.value = data.feel || '기쁨 😃';
+  
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', fetchData);
+  
+  
