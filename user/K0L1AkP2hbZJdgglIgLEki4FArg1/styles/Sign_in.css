@@ -1,0 +1,105 @@
+/* 모든 요소에 기본 상자 크기와 마진 설정 */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+/* 전체 페이지의 레이아웃 설정 */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 로그인 박스의 스타일 설정 */
+.container {
+  width: 585px;
+  height: 685px;
+  border: 1px solid #aacdff;
+  box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+/* 입력 박스의 스타일 설정 */
+.inputbox {
+  width: 440px;
+  height: 69px;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  border: 1px solid #e6e6e6;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+/* 로그인 버튼의 스타일 설정 */
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 30px; /* 로그인 버튼 아래에 여백 추가 */
+}
+
+/* 회원가입, 아이디 찾기, 비밀번호 찾기 버튼 컨테이너 스타일 */
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* 회원가입, 아이디 찾기, 비밀번호 찾기 버튼 스타일 */
+.btn-container button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: black; /* 글씨 색깔을 검은색으로 변경 */
+  margin: 0 0px; /* 버튼들 간의 간격 설정 (좌우 각각 5px) */
+}
+
+/* 버튼 간의 구분선 스타일 */
+hr {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+  width: 1px;
+  height: 10px;
+}
+
+/* 일반 버튼 스타일 설정 */
+.Page_button {
+  background-color: #0068ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* 구글 로그인 버튼 스타일 설정 */
+.google-button {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* 구글 로그인 버튼 이미지 스타일 */
+.google-button img {
+  width: 100%;
+  height: auto;
+}
