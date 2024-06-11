@@ -17,10 +17,10 @@
             
             <input type="file" id="photoInput" class="gallery_photo" accept="image/*">
             <textarea id="photoDescription" class="gallery_photo" placeholder="사진 설명"></textarea>
-            <button onclick="uploadPhoto()">게시</button>
+            <button class="action-btn" onclick="uploadPhoto()">게시</button>
             <div id="photoAlbum" class="photo-album"></div>
         </div>
-
+        <div class="divideLine"></div>
         <div class="wrapper__body">
             <div class="contents__title">
                 <div class="title">Story</div>
@@ -30,12 +30,16 @@
       
             <input type="file" id="storyInput" class="story_photo" accept="image/*">
             <textarea id="storyDescription" class="story_photo" placeholder="사진 설명"></textarea>
-            <button onclick="uploadStory()">게시</button>
+            <button class="action-btn" onclick="uploadStory()">게시</button>
             <div id="storyAlbum" class="story-album"></div>
         </div>
 
-        
+        <div id="photoModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <a class="prev" onclick="changeModalImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeModalImage(1)">&#10095;</a>
+        </div>
     </div>
-
 </body>
 </html>
