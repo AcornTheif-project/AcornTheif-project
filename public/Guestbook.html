@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guestbook</title>
-    <link href="./styles/Guestbook.css" rel="stylesheet">
-    <script src="./script/Guestbook.js"></script>
+    <link href="./styles/Guestbook.css" rel="stylesheet" />
+    <script src="./script/Guestbook.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="wrapper__header">
-            <div class="header__title">
-                <div class="title">Diary</div>
-                <div class="subtitle">TODAY CHOICE</div>
+            <div class="content__title">
+                <div class="title">Guestbook</div>
             </div>
             <div class="divideLine"></div>
-        </div>
-        <div class="Diary__container">
-            <img src="./images/word.png">
-            <div class="Diary__title">끝말잇기</div>
-            <div class="Diary__subtitle">제시어 : <span id="word">코드캠프</span></div>
-            <div class="word__text">
-                <input id="myword" class="textbox" type="text" placeholder="단어를 입력하세요">
-                <button class="search" onclick="startWord()">입력</button>
+            <div class="guestbook-entry">
+                <div class="guestbook-box">
+                    <input type="text" id="guestName" placeholder="이름" class="guestbook-name">
+                    <textarea id="guestComment" placeholder="댓글을 입력하세요" class="guestbook-comment"></textarea>
+                </div>
+                <button class="action-btn" onclick="submitGuestbook()">등록</button>
             </div>
-            <div id="result" class="word__result">결과!</div>
         </div>
-        <div class="Diary__container">
-            <img src="./images/lotto.png">
-            <div class="Diary__title">LOTTO</div>
-            <div class="Diary__subtitle">버튼을 누르세요</div>
-            <div class="Diary__lotto__number"></div>
-            <button class="wrapper__lotto__btn">Button</button>
-        </div>
+        <div id="guestbookEntries" class="guestbook-entries"></div>
     </div>
 </body>
 </html>

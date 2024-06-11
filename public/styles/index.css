@@ -78,9 +78,10 @@
 }
 
 .left__body__header__gray {
-  width: 148px;
-  height: 133px;
-  background-color: gray;
+  width: 100px; /* 적절한 너비와 높이 설정 */
+  height: 100px;
+  background-color: gray; /* 기본 배경색 */
+  border-radius: 50%; /* 원형 프로필 이미지 */
 }
 
 .left__body__header__line {

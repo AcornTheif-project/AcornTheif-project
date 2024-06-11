@@ -12,6 +12,22 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+document.addEventListener('DOMContentLoaded', () => {
+  const profileImage = localStorage.getItem('profileImage');
+  if (profileImage) {
+      const profileImageContainer = document.getElementById('profileImageContainer');
+      profileImageContainer.style.backgroundImage = `url(${profileImage})`;
+      profileImageContainer.style.backgroundSize = 'cover';
+      profileImageContainer.style.backgroundPosition = 'center';
+  }
+
+  const backgroundImage = localStorage.getItem('backgroundImage'); // localStorage에서 배경 이미지 가져오기
+  if (backgroundImage) {
+      document.querySelector('.background').style.backgroundImage = `url('${backgroundImage}')`; // .background 클래스의 배경 이미지 변경
+  }
+});
+
+
 function menuHome() {
     document.getElementById("contentFrame").setAttribute("src", "home.html");
     document.getElementById("menuHome").style =
@@ -23,6 +39,8 @@ function menuHome() {
     document.getElementById("menuBoard").style =
       "color: white; background-color: #298EB5;";
     document.getElementById("menuGuestbook").style =
+      "color: white; background-color: #298EB5;";
+      document.getElementById("menuSetting").style =
       "color: white; background-color: #298EB5;";
   }
 
@@ -40,6 +58,8 @@ function menuHome() {
       "color: white; background-color: #298EB5;";
     document.getElementById("menuGuestbook").style =
       "color: white; background-color: #298EB5;";
+      document.getElementById("menuSetting").style =
+      "color: white; background-color: #298EB5;";
   }
 
   function menuGallery() {
@@ -55,6 +75,8 @@ function menuHome() {
     document.getElementById("menuBoard").style =
       "color: white; background-color: #298EB5;";
     document.getElementById("menuGuestbook").style =
+      "color: white; background-color: #298EB5;";
+      document.getElementById("menuSetting").style =
       "color: white; background-color: #298EB5;";
   }
 
@@ -72,6 +94,10 @@ function menuHome() {
       "color: black; background-color: white;";
     document.getElementById("menuGuestbook").style =
       "color: white; background-color: #298EB5;";
+      document.getElementById("menuSetting").style =
+      "color: white; background-color: #298EB5;";
+      document.getElementById("menuSetting").style =
+      "color: white; background-color: #298EB5;";
   }
 
   function menuGuestbook() {
@@ -87,6 +113,24 @@ function menuHome() {
     document.getElementById("menuBoard").style =
       "color: white; background-color: #298EB5;";
     document.getElementById("menuGuestbook").style =
+      "color: black; background-color: white;";
+  }
+
+  function menuSetting() {
+    document
+      .getElementById("contentFrame")
+      .setAttribute("src", "setting.html");
+    document.getElementById("menuHome").style =
+      "color: white; background-color: #298EB5;";
+    document.getElementById("menuDiary").style =
+      "color: white; background-color: #298EB5;";
+    document.getElementById("menuGallery").style =
+      "color: white; background-color: #298EB5;";
+    document.getElementById("menuBoard").style =
+      "color: white; background-color: #298EB5;";
+    document.getElementById("menuGuestbook").style =
+      "color: white; background-color: #298EB5;";
+    document.getElementById("menuSetting").style =
       "color: black; background-color: white;";
   }
 
