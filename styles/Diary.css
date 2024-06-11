@@ -78,13 +78,14 @@ button {
     align-self: flex-end; /* 버튼을 우측 끝으로 정렬 */
 }
 
-.diaryEntries ul, .storyEntries ul {
+.diaryEntries ul {
     list-style-type: none;
     padding: 0;
     width: 100%;
 }
 
-.diaryEntries li, .storyEntries li {
+/* 다이어리 글의 블록 스타일을 설정 */
+.diaryEntries li {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
@@ -94,29 +95,19 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 60px; /* 블록의 최소 높이 설정 */
 }
 
-.friendPosts, .storyEntries {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+.diaryEntries span {
+    flex-grow: 1; /* 게시물 내용 영역이 남은 공간을 차지하도록 설정 */
+    margin-right: 10px; /* 버튼과의 간격 설정 */
+}
+
+.diaryEntries .button-group {
     display: flex;
-    flex-direction: column;
+    flex-shrink: 0; /* 버튼 그룹의 크기를 고정 */
 }
 
-.friendPosts div, .storyEntries div {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.friendPosts button, .storyEntries button {
-    background-color: #ff6f61;
-    padding: 10px 15px;
-    font-size: 8px;
-    margin: 1px 1px;
-    align-self: flex-end; /* 버튼을 우측 끝으로 정렬 */
+.diaryEntries button {
+    margin-left: 5px; /* 버튼 간의 간격 설정 */
 }
