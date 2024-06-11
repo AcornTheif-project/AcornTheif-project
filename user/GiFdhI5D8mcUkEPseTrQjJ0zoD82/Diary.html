@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link href="./styles/Diary.css" rel="stylesheet" />
+    <script src="./script/Diary.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 내 다이어리 섹션 -->
+        <div class="wrapper__body">
+            <div class="contents__title">
+                <div class="title">Diary</div>
+                <div class="subtitle">For my day</div>
+            </div>
+            <div class="divideLine"></div>
+            <!-- 비밀번호 입력 필드 -->
+            <input type="password" id="myDiaryPassword" class="passwordInput" placeholder="비밀번호 입력" />
+            <button onclick="accessMyDiary()">확인</button>
+            <!-- 다이어리 콘텐츠 -->
+            <div id="myDiaryContent" class="diaryContent" style="display: none;">
+                <textarea id="newPost" class="newPost" placeholder="글을 작성해주세요."></textarea>
+                <button onclick="postDiaryEntry()">게시</button>
+                <ul id="diaryEntries" class="diaryEntries"></ul>
+            </div>
+        </div>
+        <!-- 친구 다이어리 섹션 -->
+        <div class="wrapper__body">
+            <div class="contents__title">
+                <div class="title">Friends_diary</div>
+                <div class="subtitle">with our history</div>
+            </div>
+            <div class="divideLine"></div>
+            <!-- 비밀번호 입력 필드 -->
+            <input type="password" id="friendDiaryPassword" class="passwordInput" placeholder="비밀번호 입력" />
+            <button onclick="accessFriendDiary()">확인</button>
+            <!-- 친구 다이어리 콘텐츠 -->
+            <div id="friendDiaryContent" class="diaryContent" style="display: none;">
+                <ul id="friendDiaryEntries" class="diaryEntries"></ul>
+            </div>
+        </div>
+        <!-- 24시간 스토리 섹션 -->
+        <div class="wrapper__body">
+            <div class="contents__title">
+                <div class="title">Story</div>
+                <div class="subtitle">For 24h</div>
+            </div>
+            <div class="divideLine"></div>
+            <!-- 스토리 작성 필드 -->
+            <textarea id="newStory" class="newStory" placeholder="스토리 게시물 작성"></textarea>
+            <button onclick="post24hStory()">게시</button>
+            <div id="storyEntries" class="storyEntries"></div>
+        </div>
+    </div>
+</body>
+</html>
