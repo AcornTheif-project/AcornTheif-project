@@ -179,7 +179,7 @@ app.post('/register', async (req, res) => {
     });
 
     // 공통 스크립트 디렉토리를 사용자 디렉토리에 복사합니다.
-    const commonScriptsDir = path.join(__dirname, 'public', 'scripts');
+    const commonScriptsDir = path.join(__dirname, 'public', 'script');
     copyFolderRecursiveSync(commonScriptsDir, userDir);
 
     res.status(200).send('User registered successfully!');
