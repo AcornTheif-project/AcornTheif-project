@@ -178,6 +178,10 @@ app.post('/register', async (req, res) => {
       copyFileSync(sourcePath, targetPath);
     });
 
+    // 공통 스크립트 디렉토리를 사용자 디렉토리에 복사합니다.
+    const commonScriptsDir = path.join(__dirname, 'public', 'scripts');
+    copyFolderRecursiveSync(commonScriptsDir, userDir);
+
     res.status(200).send('User registered successfully!');
   } catch (error) {
     if (error.code === 'auth/email-already-in-use') {
@@ -234,7 +238,7 @@ app.post('/logout', (req, res) => {
 });
 
 // 서버를 시작합니다.
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5501;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
