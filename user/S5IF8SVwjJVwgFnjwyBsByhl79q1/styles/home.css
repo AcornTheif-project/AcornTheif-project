@@ -1,0 +1,150 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* 스크롤 기능 추가 */
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%; /* 전체 높이를 충분히 크게 설정 */
+    padding: 20px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    background-color: #55b2d4;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-results {
+    margin-bottom: 20px;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.search-results li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-results li a {
+    text-decoration: none;
+    color: #55b2d4;
+    font-weight: bold;
+}
+
+.wrapper__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contents__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title {
+    color: #55b2d4;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    padding-left: 5px;
+    font-size: 8px;
+}
+
+button {
+    margin-left: auto; /* 버튼을 오른쪽 끝으로 정렬 */
+}
+
+button.Miniroom__edit {
+    margin-left: auto; /* 버튼을 오른쪽 끝으로 정렬 */
+    padding: 5px 10px;
+    font-size: 7px;
+    border: none;
+    background-color: #55b2d4;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* 모서리를 부드럽게 설정 */
+}
+
+.divideLine {
+    width: 100%;
+    border-top: 1px solid gray;
+    margin-bottom: 5px;
+}
+
+.contents__body {
+    height: 200px;
+    font-size: 11px;
+    color: #999999;
+    text-align: center;
+    margin: 15px;
+    position: relative; /* 자식 요소의 절대 위치를 기준으로 함 */
+}
+
+.Miniroom {
+    width: 100%; /* 이미지를 충분히 크게 표시 */
+    height: auto;
+}
+
+.Minimi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto; /* 원하는 크기로 설정 */
+    height: auto; /* 원하는 크기로 설정 */
+}
+
+.latest-image {
+    width: auto; /* 이미지를 충분히 크게 표시 */
+    height: auto;
+}
+
+.wrapper__body {
+    width: 100%;
+    height: 300px;
+}
+
+.GalleryZone {
+    width: 100%;
+    height: 240px;
+    margin: 5px;
+}

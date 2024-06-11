@@ -1,0 +1,105 @@
+/* Sign_up.css */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 540px;
+  height: auto;
+  border: 1px solid #aacdff;
+  box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.error {
+  color: red;
+  height: 10px;
+  font-size: 11px;
+}
+
+h3 {
+  font-size: 32px;
+  color: #0068ff;
+  font-weight: bold;
+  width: 380px;
+  margin-bottom: 40px;
+}
+
+.inputbox {
+  width: 380px;
+  height: 60px;
+  background-color: white;
+  border-radius: 7px;
+  border: 1px solid #d2d2d2;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+.inputbox::placeholder {
+  color: #797979;
+  font-size: 16px;
+}
+
+.location {
+  margin-top: 20px;
+  width: 380px;
+  height: 60px;
+  border: 1px solid #d2d2d2;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 18px;
+  color: #797979;
+}
+
+.gender__wrapper {
+  width: 380px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.gender {
+  width: 70px;
+  text-align: center;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+  width: 380px;
+}
+
+#Sign_up__button {
+  width: 380px;
+  height: 75px;
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 30px;
+  background-color: #0068ff;
+  color: white;
+  cursor: pointer;
+}
+
+#Sign_up__button:hover {
+  background-color: #004bb5;
+}

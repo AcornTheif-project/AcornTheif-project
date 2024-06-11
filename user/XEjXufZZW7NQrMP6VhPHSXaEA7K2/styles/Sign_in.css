@@ -1,0 +1,84 @@
+/* Sign_in.css */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 585px;
+    height: 585px;
+    border: 1px solid #aacdff;
+    box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+  }
+  
+  .inputbox {
+    width: 440px;
+    height: 69px;
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    border: 1px solid #e6e6e6;
+    padding: 18px;
+    margin-top: 20px;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .btn-container button {
+    background-color: #0068ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .btn-container button:hover {
+    background-color: #004bb5;
+  }
+  
+  .Page_button {
+    background-color: #0068ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .Page_button:hover {
+    background-color: #004bb5;
+  }
+  
