@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <link href="./styles/setting.css" rel="stylesheet" />
+    <script src="./script/setting.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper__header">
+            <div class="contents__title">
+                <div class="title">Profile_img</div>
+            </div>
+            <div class="divideLine"></div>
+        </div>
+        <div class="profile-settings">
+            <label for="profileImageInput">변경할 프로필 이미지 선택:</label>
+            <input type="file" id="profileImageInput" accept="image/*" />
+            <button onclick="uploadProfileImage()">업로드</button>
+        </div>
+        <br>
+
+
+        <div class="contents__title">
+            <div class="title">Background_img</div>
+        </div>
+        <div class="divideLine"></div>
+        <div class="background-settings">
+            <label for="backgroundImageInput">배경 이미지 선택:</label>
+            <input type="file" id="backgroundImageInput" accept="image/*" />
+            <button onclick="setBackground()">설정</button>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
