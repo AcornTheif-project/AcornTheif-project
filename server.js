@@ -182,12 +182,12 @@ app.post('/register', async (req, res) => {
     const commonScriptsDir = path.join(__dirname, 'public', 'script');
     copyFolderRecursiveSync(commonScriptsDir, userDir);
 
-    res.status(200).send('User registered successfully!');
+    res.status(200).send('환영합니다!');
   } catch (error) {
     if (error.code === 'auth/email-already-in-use') {
-      res.status(400).send('Error: The email address is already in use by another account.');
+      res.status(400).send('이미 사용하고 있는 계정 정보 입니다.');
     } else {
-      res.status(400).send('Error: ' + error.message);
+      res.status(400).send('오류 메시지: ' + error.message);
     }
   }
 });
