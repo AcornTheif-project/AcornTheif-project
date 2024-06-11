@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+    <link href="./styles/Gallery.css" rel="stylesheet" />
+    <script src="./script/Gallery.js" defer></script>
 </head>
 <body>
-    Gallery
+    <div class="wrapper">
+        <div class="wrapper__body">
+            <div class="contents__title">
+                <div class="title">Gallery</div>
+            </div>
+            <div class="divideLine"></div>
+            
+            <input type="file" id="photoInput" class="gallery_photo" accept="image/*">
+            <textarea id="photoDescription" class="gallery_photo" placeholder="사진 설명"></textarea>
+            <button onclick="uploadPhoto()">게시</button>
+            <div id="photoAlbum" class="photo-album"></div>
+        </div>
+
+        <div class="wrapper__body">
+            <div class="contents__title">
+                <div class="title">Story</div>
+                <div class="subtitle">For 24h</div>
+            </div>
+            <div class="divideLine"></div>
+      
+            <input type="file" id="storyInput" class="story_photo" accept="image/*">
+            <textarea id="storyDescription" class="story_photo" placeholder="사진 설명"></textarea>
+            <button onclick="uploadStory()">게시</button>
+            <div id="storyAlbum" class="story-album"></div>
+        </div>
+
+        
+    </div>
+
 </body>
 </html>
