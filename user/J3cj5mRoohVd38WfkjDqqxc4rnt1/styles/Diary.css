@@ -1,0 +1,143 @@
+/* 공통 스타일 */
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* 스크롤 기능 추가 */
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    padding: 20px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.wrapper__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+.contents__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title {
+    color: #55b2d4;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.subtitle {
+    padding-left: 5px;
+    font-size: 8px;
+}
+.divideLine {
+    width: 100%;
+    border-top: 1px solid gray;
+    margin-bottom: 5px;
+}
+.passwordInput {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+button {
+    padding: 10px;
+    background-color: #55b2d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px;
+}
+.registerButton {
+    align-self: flex-end; /* 버튼을 우측 끝으로 정렬 */
+}
+
+.diaryEntries {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.diaryEntries li {
+    margin-bottom: 20px; /* 게시물 간의 간격 설정 */
+}
+
+.diary-scrollbox {
+    position: relative;
+    top: 10px;
+    max-height: 500px; /* 스크롤박스의 최대 높이 설정 */
+    overflow: hidden; /* 스크롤을 숨김 */
+}
+
+.diary {
+    border: 1px solid #EDEDF0;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0; /* 마진 제거 */
+}
+
+.diary-date {
+    font-family: "NeoDunggeunmo";
+    color: black;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #c7c9ca;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.diary-contents {
+    font-size: 20px;
+    font-family: "KyoboHand";
+    text-align: center;
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    gap: 5px; /* 버튼 간의 간격 설정 */
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px;
+    background-color: #55b2d4;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button.edit {
+    background-color: #55b2d4;
+}

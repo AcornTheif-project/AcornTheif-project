@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+    <link href="./styles/Board.css" rel="stylesheet" />
+    <script src="./script/Board.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 게시판 섹션 -->
+        <div class="wrapper__body" id="boardSection">
+            <div class="contents__title">
+                <div class="title">Board</div>
+                <div class="subtitle">Share your thoughts</div>
+            </div>
+            <div class="divideLine"></div>
+            <div class="input-container">
+                <textarea id="newPost" class="newPost" placeholder="글을 작성해주세요."></textarea>
+                <button class="registerButton" onclick="postBoardEntry()">게시</button>
+            </div>
+            <div class="diary-scrollbox">
+                <ul id="boardEntries" class="boardEntries"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

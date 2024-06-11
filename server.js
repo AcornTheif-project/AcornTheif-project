@@ -171,7 +171,7 @@ app.post('/register', async (req, res) => {
     copyFolderRecursiveSync(commonImagesDir, userDir);
 
     // 다른 HTML 파일들을 사용자 디렉토리에 복사합니다.
-    const htmlFiles = ['Board.html', 'Diary.html', 'Gallery.html', 'Guestbook.html', 'home.html'];
+    const htmlFiles = ['Board.html', 'Diary.html', 'Gallery.html', 'Guestbook.html', 'home.html','setting.html'];
     htmlFiles.forEach(file => {
       const sourcePath = path.join(__dirname, 'public', file);
       const targetPath = path.join(userDir, file);
